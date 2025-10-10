@@ -1,11 +1,10 @@
-include "../include/calculator.h"
+#include "../include/calculator.h"
+#include <iostream>
+#include <stdexcept>
 
-float Divide(int a, int b){
-    if (a==0){
-        cout<<"Zero Divisor Error";
-        return 0;
+float Divide(int a, int b) {
+    if (b == 0) {
+        throw std::invalid_argument("Division by zero error.");
     }
-    else{
-        return a/b;
-    }
+    return static_cast<float>(a) / b;
 }
