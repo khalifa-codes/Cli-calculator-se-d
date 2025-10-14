@@ -1,3 +1,0 @@
-int sub(){
-    cout<<"sbtraction";
-}
